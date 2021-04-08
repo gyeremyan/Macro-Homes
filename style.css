@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family= Merriweather|Monserrat');
+body {
+  font-family: Merriweather;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background-image: url(http://www.ideasphere.com/wp-content/uploads/2016/08/Savin-NY-Website-Background-Web-1.jpg);
+    background-size: auto 100%;
+    background-color: #CCCCCC;
+    background-repeat: repeat-x;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+	0% {
+		background-position: left;
+	}
+	50% {
+		background-position: center;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
+/* @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+h1 {
+color:grey;
+font-style: bold;
+  font-family: Merriweather;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+	  font-family: Merriweather;
+
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #9c9c9c;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+	  font-family: Merriweather;
+
+
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.active {
+  background-color: #00ccff;
+
+}
+
+div [class^="col-"]{
+  box-sizing: border-box;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.card {
+  padding-left:auto;
+  padding-right:auto;
+  margin-top: 1em;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.card-title{
+  font-size:20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition:1s;
+  cursor:pointer;
+}
+.card-title i{
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+  color:#ffa710
+}
+
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg);
+  color:#18d4ca;
+
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.phppot-container{
+  text-align: center;
+}
+
+.signup-heading{
+  font-size: 45px;
+}
+
+.form-label{
+  font-size: 17px;
+}
